@@ -1,0 +1,5 @@
+@media all and (min-width: 576px) {
+	.border-sm-info {
+		border: 1px solid rgba(23, 162, 184, .5);
+	}
+}

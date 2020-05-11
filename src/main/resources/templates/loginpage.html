@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet "href="./assets/bootstrap/bootstrap.min.css"/>
+
+        <!-- owner CSS -->
+        <link rel="stylesheet" href="./assets/login/style.css"/>
+
+        <title>Login</title>
+    </head>
+
+    <body>
+        <script src="./assets/jquery/jquery.min.js"></script>
+        
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-4 text-center position-absolute">
+                    <div class="alert alert-warning" role="alert" id="warning-info" style="display: none;">
+                        <strong>User Does Not Exist!</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-sm-7 col-md-6 col-lg-5 col-xl-4 p-sm-5 mt-2 rounded border-sm-info">
+                    <form novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="col-sm-12 text-center"><i class="fas fa-home fa-2x"></i></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-12 text-center mb-4">
+                                <span class="h3">Signin</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="email-input">Email Address</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                        </div>
+                                        <input type="email" th:value="${userEmail}" class="form-control" id="email-input" placeholder="name@example.com"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="password-input">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <input type="password" class="form-control" id="password-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-12">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="remember-input"/>
+                                    <label class="custom-control-label" for="remember-input">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class="col-12">
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-outline-info w-100">Login</button>
+                                    <hr/>
+                                </div>
+                                <a href="/register">Haven't an account?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+         <script src="./assets/bootstrap/bootstrap.min.js"></script>
+
+        <!-- owner Javascript -->
+        <script src="./assets/login/script.js"></script>
+
+        <!-- FontAwesome Javascript -->
+        <script src="./assets/fa/fontawesome.min.js"></script>
+        <script src="./assets/fa/solid.min.js"></script>
+    </body>
+</html>

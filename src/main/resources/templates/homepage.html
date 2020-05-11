@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet "href="./assets/bootstrap/bootstrap.min.css"/>
+
+        <!-- owner CSS -->
+        <link rel="stylesheet" href="./assets/home/style.css"/>
+
+        <title>Home page</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <!-- header -->
+            <div class="row">
+                <div class="col-sm-12 bg-dark text-center p-5">
+                    <h1 class="text-light">Hello, <span th:text="${name}"></span> <span th:text="${surname}"></span></h1>
+                </div>
+            </div>
+
+            <!-- body -->
+            <div class="row mt-5 justify-content-center">
+                <div class="col-sm-6">
+                    <table class="table text-center">
+                        <thead class="thead-light">
+                            <th scope="col">Name</th>
+                            <th scope="col">Surname</th>
+                            <th scope="col">Birthday</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Favorite Color</th>
+                            <th scope="col">Email</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td th:text="${name}"></td>
+                                <td th:text="${surname}"></td>
+                                <td th:text="${birthday}"></td>
+                                <td th:text="${age}"></td>
+                                <td th:text="${color}"></td>
+                                <td th:text="${email}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center">
+                <div class="col-sm-6">
+                    <div class="row mt-3 justify-content-center">
+                        <div class="col-sm-4 text-center">
+                            <button type="button" class="btn btn btn-warning text-white">Edit<i class="fas fa-edit ml-3"></i></button>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <button type="button" class="btn btn btn-danger">Logout<i class="fas fa-sign-out-alt ml-3"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="modal fade" tabindex="-1" data-backdrop="static" role="dialog" id="edit-modal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content bg-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title">User edit</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name-input">Name</label>
+                                        <input type="text" class="form-control" id="name-input" maxlength="50"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="surname-input">Surname</label>
+                                        <input type="text" class="form-control" id="surname-input" maxlength="50"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label for="birthday-input">Birthday</label>
+                                        <input type="text" class="form-control" id="birthday-input" maxlength="10"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="age-input">Age</label>
+                                        <input type="number" readonly="readonly" class="form-control" id="age-input"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="color-input">Favorite color</label>
+                                        <input type="text" class="form-control" id="color-input"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="email-input">New email</label>
+                                        <input type="email" class="form-control" id="email-input" aria-describedby="email-helper" maxlength="120"/>
+                                        <small id="email-helper" class="form-text text-danger d-none">This email is already in use</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="password-input">New Password</label>
+                                        <input type="password" class="form-control" id="password-input" name="password" required="true" minlength="8" maxlength="50" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Javascript -->
+        <script src="./assets/bootstrap/bootstrap.min.js"></script>
+
+        <!-- owner Javascript -->
+        <script src="./assets/home/script.js"></script>
+
+        <!-- FontAwesome Javascript -->
+        <script src="./assets/fa/fontawesome.min.js"></script>
+        <script src="./assets/fa/solid.min.js"></script>
+    </body>
+</html>
